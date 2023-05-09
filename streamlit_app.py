@@ -6,7 +6,7 @@ streamlit.header('Breakfast Menu')
 streamlit.text(' 🥣 Omega 3 and Blueberry Oatmeal') 
 streamlit.text(' 🥗 Kale, Spinach and Rocket Smoothie') 
 streamlit.text(' 🐔 Hard-Boiled Free-Range Egg') 
-streamlit.text(' 🥑🍞 Avocado Toast') 
+streamlit.text(' 🥑🍞 Avocado Toast')  
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
 
@@ -33,3 +33,5 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_cho
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 streamlit.dataframe(fruityvice_normalized)
+
+import snowflake.connector
